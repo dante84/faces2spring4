@@ -5,13 +5,15 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
 <h:head></h:head> 
-<h:body> 
-       
-      <h:form id="forma">
-      
-            <h:link value="Usuarios" outcome="usuarios"/>                        
-            
-      </h:form>
-   
+<h:body>
+ 
+     <h:form>
+     
+         <h:selectOneMenu value="#{uc.comboValor}">
+            <f:selectItem itemValue="" itemLabel="--Elige--"/>
+         </h:selectOneMenu>
+         
+     </h:form>  
+
 </h:body> 
 </html>

@@ -1,7 +1,9 @@
 package com.dante.dao;
 
+import java.util.ArrayList;
+
 public interface LoginDAO {
 	 
-	   public boolean verificaLogin(String nombre,String apellido);
+	   public ArrayList<Object> verificaLogin(String nombre,String apellido);
 
 }

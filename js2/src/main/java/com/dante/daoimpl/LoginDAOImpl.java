@@ -1,5 +1,7 @@
 package com.dante.daoimpl;
 
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -16,15 +18,17 @@ public class LoginDAOImpl implements LoginDAO{
 
 	   public void setLoginSP(LoginSPImpl loginSP) { this.loginSP = loginSP; }
 
-	   public boolean verificaLogin(String nombre,String apellido){
+	   public ArrayList<Object> verificaLogin(String nombre,String apellido){
 		   
 		      Map<String,Object> valores = loginSP.execute(nombre,apellido);
 		      
+		      ArrayList<Object> lista = new ArrayList<Object>();
+		      
 		      for( Entry<String,Object> entry: valores.entrySet() ){
-		    	   System.out.println( entry.getKey() + " || " + entry.getValue() );
+		    	   lista.add(entry.getValue());
 		      }
-		   		   
-		      return false;
+		      		      		   		  
+		      return lista;
 		   
 	   }
 	   
