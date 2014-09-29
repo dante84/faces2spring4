@@ -2,15 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:o="http://omnifaces.org/ui"
+      xmlns:of="http://omnifaces.org/functions"> 
 
 <h:head></h:head> 
 <h:body>
  
      <h:form>
      
-         <h:selectOneMenu value="#{uc.comboValor}">
-            <f:selectItem itemValue="" itemLabel="--Elige--"/>
+         <h:selectOneMenu converter="omnifaces.SelectItemsConverter">
+            <f:selectItem noSelectionOption="true" itemLabel="--Elige--"/>
          </h:selectOneMenu>
          
      </h:form>  

@@ -9,7 +9,6 @@ import com.dante.beans.UsuarioBean;
 
 public class UsuarioMapper implements RowMapper<UsuarioBean>{
 
-	   @Override
 	   public UsuarioBean mapRow(ResultSet rs, int numero) throws SQLException {
 		
 		      UsuarioBean usuarioBean = new UsuarioBean();

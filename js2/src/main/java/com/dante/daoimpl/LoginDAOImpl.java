@@ -1,22 +1,21 @@
 package com.dante.daoimpl;
 
-import java.awt.List;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import com.dante.dao.LoginDAO;
-import com.dante.spring.beansImpl.SesionBeanImpl;
 import com.dante.spsImpl.LoginSPImpl;
 
-public class LoginDAOImpl implements LoginDAO{
+public class LoginDAOImpl implements LoginDAO,Serializable{
 	
-	   private SesionBeanImpl sesionBean;
+	   private static final long serialVersionUID = 1L;
+	   
 	   private LoginSPImpl loginSP;
 	
-	   public void setSesionBean(SesionBeanImpl sesionBean) { this.sesionBean = sesionBean; }
-
 	   public void setLoginSP(LoginSPImpl loginSP) { this.loginSP = loginSP; }
+	  
 
 	   public ArrayList<Object> verificaLogin(String nombre,String apellido){
 		   

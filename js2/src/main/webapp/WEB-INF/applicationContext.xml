@@ -9,12 +9,11 @@
 		     <property name="password" value="gtx780ti"/>
        </bean>
 
-       <bean id="loginDAOImpl" class="com.dante.daoimpl.LoginDAOImpl" scope="request">
-             <property name="sesionBean" ref="sesionBean"/>
+       <bean id="loginDAOImpl" class="com.dante.daoimpl.LoginDAOImpl" scope="session">
              <property name="loginSP"    ref="loginSP"/>
        </bean>
        
-       <bean id="sesionBean" class="com.dante.spring.beansImpl.SesionBeanImpl" scope="session"/>   
+       <bean id="sesionBeanImpl" class="com.dante.spring.beansImpl.SesionBeanImpl" scope="session"/>   
        
        <bean id="loginSP" class="com.dante.spsImpl.LoginSPImpl">
              <property name="dataSource" ref="dataSource"/>
